@@ -1,4 +1,8 @@
-﻿namespace AddisEvents.Controllers
+﻿using AddisEvents.Models;
+using AddisEvents.Models.Services;
+using Microsoft.AspNetCore.Mvc;
+
+namespace AddisEvents.Controllers
 {
     public class EventController : Controller
     {
@@ -60,3 +64,4 @@
         }
     }
 }
+
