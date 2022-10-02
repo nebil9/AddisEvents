@@ -1,0 +1,42 @@
+﻿@model Event
+
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Event</h2>
+<form action="/product/create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="EventName">Event Name</label>
+            <input type="text" class="form-control" id="EventName" name="EventName" placeholder="Event Name">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="EventType">Event Type</label>
+            <input type="text" class="form-control" id="EventType" name="EventType" placeholder="EventType">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="EventDate">Event Date</label>
+            <input type="date" class="form-control" id="EventDate" name="EventDate" placeholder="Event Date">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="EventDescription">Event Descriptions</label>
+            <input type="text" class="form-control" id="EventDescription" name="EventDescription" placeholder="Event Description">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Address">Address</label>
+            <input type="text" class="form-control" id="Address" name="Address" placeholder="Address">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="OtherInfo">Brand ID</label>
+            <input type="text" class="form-control" id="OtherInfo" name="OtherInfo" placeholder="Other Info">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <a class="btn btn-danger" href="/event/index">Cancel</a>
+</form>

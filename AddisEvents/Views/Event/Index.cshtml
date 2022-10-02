@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Event>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Events</h1>
+
+<table>
+    <tr>
+        <th>Event ID</th>
+        <th>Event Name</th>
+        <th>Event Type</th>
+        <th>Event Date</th>
+        <th>Event Description</th>
+        <th>Address</th>
+        <th>Details</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.EventName</td>
+            <td>@item.EventType</td>
+            <td>@item.EventDate</td>
+            <td>@item.EventDescription</td>
+            <td>@item.Address</td>
+            <td>
+                <a href="/event/details/@item.Id" class=" btn btn-outline-info"><i class="bi bi-eye"></i>Details</a>
+            </td>
+            <td>
+                <a href="/event/edit/@item.Id" class=" btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+            </td>
+            <td>
+                <a href="/event/delete/@item.Id" class=" btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<div style="position:fixed; right:25px; bottom:50px" class="text-white">
+    <a asp-action="Create" class="btn btn-success"><i class="bi bi-plus-circle"></i>   Add New</a>
+</div>
