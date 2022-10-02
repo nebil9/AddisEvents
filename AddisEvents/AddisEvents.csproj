@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Event\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>
 
