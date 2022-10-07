@@ -1,0 +1,44 @@
+﻿@model List<Event>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of Events</h1>
+
+<table class="table">
+    <tr>
+        <th>Event Name</th>
+        <th>Event Type</th>
+        <th>Event Date</th>
+        <th>Address</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EventName</td>
+            <td>@item.EventType</td>
+            <td>@item.EventDate</td>
+            <td>@item.Address</td>
+            <td>
+                <a href="/events/details/@item.Id" class=" btn btn-outline-info"><i class="bi bi-eye"></i>Details</a>
+            </td>
+            <td>
+                <a href="/events/edit/@item.Id" class=" btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+            </td>
+            <td>
+                <a href="/events/delete/@item.Id" class=" btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="text-white">
+    <a href="/events/create" class="btn btn-outline-success">Add New Event</a>
+</div>
+
+@*<div style="position:fixed; right:1100px; bottom:50px" class="text-white">
+    <form asp-action="Create">
+        <input type="submit" value="Add New Event" />
+    </form>
+</div>*@

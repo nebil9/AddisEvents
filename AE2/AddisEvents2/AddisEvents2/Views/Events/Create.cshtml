@@ -1,0 +1,46 @@
+﻿@model Event
+
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Event</h2>
+<form asp-action="Create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="EventName"></label>
+            <input asp-for="EventName" class="form-control">
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="EventType"></label>
+            <input asp-for="EventType" class="form-control">
+            <span asp-validation-for="EventType" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="EventDate"></label>
+            <input asp-for="EventDate" class="form-control">
+            <span asp-validation-for="EventDate" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="EventDescription"></label>
+            <input asp-for="EventDescription" class="form-control">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control">
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="OtherInfo"></label>
+            <input asp-for="OtherInfo" class="form-control">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-danger">Cancel</a>
+</form>

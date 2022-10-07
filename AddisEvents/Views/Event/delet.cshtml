@@ -5,11 +5,11 @@
 }
 
 <h2>Delete Event</h2>
-<form action="/Event/delete/@Model.Id" method="post">
+<form asp-action="/Event/delete/@Model.Id" method="post">
     <table class="table">
         <tr>
             <td>
-                <label for="EventName">Event Name</label>
+                <label asp-for="EventName"></label>
             </td>
             <td>
                 <input type="hidden" name="ID" value="@Model.Id" />
@@ -20,5 +20,5 @@
 
     <div>Are you sure to delete this event?</div>
     <button type="submit" class="btn btn-danger">Delete</button>
-    <a class="btn btn-warning" href="/event/index">Cancel</a>
+    <a asp-action="Index" class="btn btn-warning">Cancel</a>
 </form>

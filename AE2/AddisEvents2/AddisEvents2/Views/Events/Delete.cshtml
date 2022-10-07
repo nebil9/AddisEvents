@@ -1,0 +1,24 @@
+﻿@model Event
+
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete Event</h2>
+<form asp-action="/Events/delete/@Model.Id" method="post">
+    <table class="table">
+        <tr>
+            <td>
+                <label asp-for="EventName"></label>
+            </td>
+            <td>
+                <input type="hidden" name="ID" value="@Model.Id" />
+                @Model.EventName
+            </td>
+        </tr>
+    </table>
+
+    <div>Are you sure to delete this event?</div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="Events/Index" class="btn btn-warning">Cancel</a>
+</form>

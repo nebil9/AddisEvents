@@ -6,22 +6,17 @@
 
 <h1>Events</h1>
 
-<table>
+<table class="table">
     <tr>
-        <th>Event ID</th>
         <th>Event Name</th>
         <th>Event Type</th>
         <th>Event Date</th>
-        <th>Event Description</th>
         <th>Address</th>
         <th>Details</th>
-        <th>Edit</th>
-        <th>Delete</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.Id</td>
             <td>@item.EventName</td>
             <td>@item.EventType</td>
             <td>@item.EventDate</td>

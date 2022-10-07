@@ -51,6 +51,9 @@ namespace AddisEvents.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("EventDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("EventDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
